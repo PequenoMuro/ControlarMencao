@@ -1,0 +1,543 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+
+        function calcularMencao() {
+    // Declaração de Variavel
+    var mbCount = 0;
+    var bCount = 0;
+    var rCount = 0;
+
+    
+    var selectElements = document.getElementsByClassName("opcoesSelect");
+
+    // Laço de repetição
+    for (var i = 0; i < selectElements.length; i++) {
+        var selectElement = selectElements[i];
+        var selectedValue = selectElement.value;
+
+        // verifica qual a nota da pessoa e adiciona +1
+        if (selectedValue === "MB") mbCount++;
+        else if (selectedValue === "B") bCount++;
+        else if (selectedValue === "R") rCount++;
+    }
+
+    // Coloca o total
+    document.getElementById("mbCount").textContent = mbCount;
+    document.getElementById("bCount").textContent = bCount;
+    document.getElementById("rCount").textContent = rCount;
+}
+
+//  evento de clique no botão calcular
+document.getElementById("calcularBtn").addEventListener("click", calcularMencao);
+        
+        
+    
+
+        
+    </script>
+    <style>
+body {
+            background-color: #b8c0cb;
+            
+            color: #bbbdc0;
+        }
+
+        hr {
+    border-top: 1px solid white;
+}
+
+ .coluna-especial1 {
+            background-color: #545b65
+          
+        }
+
+        .coluna-especial2{
+
+             background-color: #282b32
+
+        }
+
+        button {
+  padding: 12.5px 30px;
+  border: 0;
+  border-radius: 100px;
+  background-color: #545b65;
+  color: #ffffff;
+  font-weight: Bold;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+button:hover {
+  background-color: #0c0e10;
+  box-shadow: 0 0 20px #282b32;
+  transform: scale(1.1);
+}
+
+button:active {
+  background-color: white;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  box-shadow: none;
+  transform: scale(0.98);
+}
+      
+       select{
+
+           background-color: #282b32;
+           color:#bbbdc0;
+           border-radius:90px;
+           border-color: #545b65;
+
+       }
+
+       nav{
+
+           background-color:#545b65;
+           height: 50px;
+       }
+
+       
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default custom fixed-top"><center style="margin-left:46%;color:white">NSA 2</center></nav>
+    <br>
+    <br>
+     <br>
+    <br>
+<center><h2 style="margin-right:1%;color:#2c2d35;font-family: 'Garamond', sans-serif;"><b>Controlador de Menções</b><h2></center>
+<center><label style="margin-right:2%;color:#2c2d35;font-family: 'Garamond', sans-serif;"><b>este app  permite com que você insira e calcule menções</b><label></center>
+<br>
+    
+    
+    <br>
+  <div class="container-fluid">
+    <div class="row">
+        <div style="margin-left:9%;; border-radius: 15px 0 0 0" class="col-2 coluna-especial1">
+            <p class="text-sm" style="font-size:14px;border-radius: 10px 0 0 0"><b>Discipli</b></p>
+        </div>
+        <div class="col-2 coluna-especial1">
+            <p class="text-sm" style="font-size:14px"><b>1°sem</b></p>
+        </div>
+        <div class="col-2 coluna-especial1">
+            <p class="text-sm" style="font-size:14px"><b>2°sem</b></p>
+        </div>
+        <div class="col-2 coluna-especial1">
+            <p class="text-sm "style="font-size:14px "><b>3°sem</b></p>
+        </div>
+        <div class="col-2 coluna-especial1" style="border-radius: 0 15px 0 0">
+            <p class="text-sm "style="font-size:14px; "><b>4°sem</b></p>
+        </div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%"  class="col-2 coluna-especial2" ><label style="font-size:14px"> BD II</label></div>
+        <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect" >
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+        <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select ="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:13px"> Biologia</label></div>
+        <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+        <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:12px"> Ed Fis</label></div>
+       <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:14px"> ECO</label></div>
+      <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+        <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:13px"> Fisica</label></div>
+    <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:13px"> Geografia</label></div>
+      <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+        <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2" coluna-especial2><label style="font-size:13px"> Historia</label></div>
+     <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:14px"> Inglês</label></div>
+       <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:13px"> Portugs</label></div>
+      <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:13px"> Matema</label></div>
+      <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:14px"> PAM</label></div>
+      <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:13px"> PW II</label></div>
+      <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect" >
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%" class="col-2 coluna-especial2"><label style="font-size:13px"> Quimica</label></div>
+        <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+    <div class="row">
+        <div style="margin-left:9%;border-radius: 0 0 0 15px" class="col-2 coluna-especial2"><label style="font-size:14px"> DS</label></div>
+        <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px"> <center> <select class="opcoesSelect">
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+         <div class="col-2 text-center coluna-especial2" style="font-size:14px;border-radius: 0 0 15px 0"> <center> <select >
+                    <option value=""></option>
+                    <option value="MB">MB</option>
+                    <option value="B">B</option>
+                    <option value="R">R</option>
+                </select></center></center></div>
+    </div>
+</div>
+<br>
+<br>
+<center>
+<a  onclick="location.reload();"><button >Limpar</button></a><button id="calcularBtn" onclick="calcularMencao()" >Calcular</button>
+</center>
+<br>
+<center>
+    <center>
+  <div style="display: flex; justify-content: center;">
+  <h4 style="margin-right:2%;color:#2c2d35;font-family: 'Garamond', sans-serif;"><b> MB= <label id="mbCount"> 0 &nbsp;</label></b></h4>
+  <h4 style="margin-right:2%;color:#2c2d35;font-family: 'Garamond', sans-serif;"><b> B= <label id="bCount"> 0 &nbsp;</label></b></h4>
+  <h4 style="color:#2c2d35;font-family: 'Garamond', sans-serif;"><b> R= <label id="rCount"> 0 &nbsp;</label></b></h4>
+</div>
+</center>
+</center>
+</body>
+</html>
